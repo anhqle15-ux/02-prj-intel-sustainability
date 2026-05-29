@@ -1,1 +1,320 @@
-/* Add your CSS here */
+/* ===== GLOBAL STYLES ===== */
+/* Apply to all elements - sets base styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Makes width calculations easier */
+}
+
+/* ===== COLOR PALETTE ===== */
+/* Intel-inspired blue color scheme */
+:root {
+  --intel-blue: #0071c5;      /* Primary Intel blue */
+  --dark-blue: #00338d;        /* Darker shade of blue */
+  --light-blue: #e8f0fe;       /* Light background blue */
+  --white: #ffffff;            /* White */
+  --light-gray: #f5f5f5;       /* Light gray background */
+  --dark-gray: #333333;        /* Dark text */
+  --medium-gray: #666666;      /* Medium gray text */
+}
+
+/* ===== BODY & GENERAL LAYOUT ===== */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;            /* Better text readability */
+  color: var(--dark-gray);
+  background-color: var(--light-gray);
+}
+
+/* ===== TYPOGRAPHY ===== */
+/* Heading 1 - Main page title */
+h1 {
+  font-size: 3.5rem;           /* Large, prominent title */
+  font-weight: 700;            /* Bold */
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Heading 2 - Section titles */
+h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--dark-blue);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Heading 3 - Card titles */
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--intel-blue);
+  margin-bottom: 0.5rem;
+}
+
+/* Paragraph text */
+p {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* ===== HERO SECTION ===== */
+/* Header/hero banner at top of page */
+.hero {
+  background: linear-gradient(135deg, var(--intel-blue) 0%, var(--dark-blue) 100%);
+  color: var(--white);
+  padding: 6rem 2rem;          /* Top/bottom and left/right padding */
+  text-align: center;
+}
+
+/* Hero content container */
+.hero-content {
+  max-width: 900px;            /* Limit width for readability */
+  margin: 0 auto;              /* Center horizontally */
+}
+
+/* Hero logo sizing */
+.hero-logo {
+  max-width: 150px;            /* Logo size */
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+/* Hero title styling */
+.hero-title {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+/* Hero subtitle paragraph */
+.hero-subtitle {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  opacity: 0.95;               /* Slightly transparent for depth */
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+  padding: 4rem 2rem;
+}
+
+/* ===== TIMELINE SECTION ===== */
+.timeline-section {
+  max-width: 1400px;           /* Maximum width for layout */
+  margin: 0 auto;              /* Center on page */
+}
+
+/* Timeline section heading */
+.timeline-heading {
+  font-size: 2.5rem;
+  color: var(--dark-blue);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* ===== TIMELINE CONTAINER (FLEXBOX LAYOUT) ===== */
+.timeline-container {
+  display: flex;               /* Enable flexbox */
+  flex-wrap: wrap;             /* Allow cards to wrap to next line */
+  gap: 2rem;                   /* Space between cards */
+  justify-content: center;     /* Center cards */
+  align-items: stretch;        /* Make all cards same height */
+}
+
+/* ===== MILESTONE CARDS ===== */
+/* Individual card styling */
+.milestone-card {
+  background-color: var(--white);
+  border-radius: 12px;         /* Rounded corners */
+  overflow: hidden;            /* Hide content outside rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: all 0.3s ease;   /* Smooth hover animation */
+  display: flex;               /* Flexbox for card layout */
+  flex-direction: column;      /* Stack content vertically */
+  width: calc(33.333% - 2rem); /* 3 cards per row on desktop */
+  cursor: pointer;             /* Show it's interactive */
+}
+
+/* Card hover effect - lift and enhance shadow */
+.milestone-card:hover {
+  box-shadow: 0 12px 20px rgba(0, 113, 197, 0.2); /* Blue shadow on hover */
+  transform: translateY(-8px); /* Move card up slightly */
+}
+
+/* ===== CARD YEAR BADGE ===== */
+/* Year display at top of card */
+.year-badge {
+  background-color: var(--intel-blue);
+  color: var(--white);
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+/* ===== CARD IMAGE ===== */
+/* Milestone image styling */
+.milestone-image {
+  width: 100%;                 /* Full card width */
+  height: 200px;              /* Fixed height for consistency */
+  object-fit: cover;          /* Fill space without distortion */
+  display: block;             /* Remove inline spacing */
+}
+
+/* ===== CARD CONTENT ===== */
+/* Text content container inside card */
+.card-content {
+  padding: 1.5rem;            /* Space inside card */
+  flex-grow: 1;               /* Expand to fill available space */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card title styling */
+.milestone-title {
+  color: var(--intel-blue);
+  margin-bottom: 0.8rem;
+}
+
+/* Card description text */
+.milestone-description {
+  color: var(--medium-gray);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* ===== FOOTER SECTION ===== */
+.footer {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  text-align: center;
+  padding: 3rem 2rem;
+  margin-top: 3rem;
+}
+
+/* Footer text styling */
+.footer-text {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* Footer copyright text */
+.footer-copyright {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* ===== RESPONSIVE DESIGN - TABLET ===== */
+/* Medium screens (768px and up) - 2 cards per row */
+@media (max-width: 1024px) {
+  .milestone-card {
+    width: calc(50% - 1rem);   /* 2 cards per row */
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+/* ===== RESPONSIVE DESIGN - MOBILE ===== */
+/* Small screens (768px and below) - 1 card per row (stack vertically) */
+@media (max-width: 768px) {
+  .milestone-card {
+    width: 100%;               /* Full width on mobile */
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .hero {
+    padding: 3rem 1rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  main {
+    padding: 2rem 1rem;
+  }
+
+  .timeline-heading {
+    font-size: 1.8rem;
+  }
+
+  .timeline-container {
+    gap: 1.5rem;
+  }
+
+  .card-content {
+    padding: 1rem;
+  }
+
+  .milestone-image {
+    height: 150px;
+  }
+
+  .year-badge {
+    font-size: 1.5rem;
+    padding: 0.8rem;
+  }
+}
+
+/* ===== RESPONSIVE DESIGN - VERY SMALL SCREENS ===== */
+/* Extra small screens (480px and below) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .hero-logo {
+    max-width: 100px;
+  }
+
+  .milestone-image {
+    height: 120px;
+  }
+
+  .year-badge {
+    font-size: 1.2rem;
+    padding: 0.6rem;
+  }
+}
