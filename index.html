@@ -1,248 +1,385 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-  <!-- Character encoding for proper text display -->
   <meta charset="UTF-8" />
-  <!-- Viewport setting for responsive design on mobile devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Intel: Sustainability Through the Ages</title>
-  <!-- Link to external CSS file -->
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Custom stylesheet for theme and layout refinements -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Accessible skip link for keyboard users -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <!-- ===== HEADER / HERO SECTION ===== -->
-  <!-- Hero section with Intel branding inspiration -->
-  <header class="hero">
-    <div class="hero-content">
-      <!-- Logo image with Intel branding -->
-      <img src="img/intel-header-logo.svg" alt="Intel Logo" class="hero-logo" />
-      
-      <!-- Main title of the page -->
-      <h1 class="hero-title">
-        Sustainability Through the Ages
-      </h1>
+  <!-- HEADER AND NAVIGATION -->
+  <header class="bg-intel-blue text-white">
+    <nav class="navbar navbar-expand-lg navbar-dark py-3" aria-label="Primary navigation">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+          <img src="img/intel-header-logo.svg" alt="Intel logo" width="40" height="40" />
+          <span>Intel Sustainability</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+          aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#timeline">Timeline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#highlights">Focus Areas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#newsletter">Newsletter</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#faq">FAQ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-      <!-- Subtitle / Description paragraph -->
-      <p class="hero-subtitle">
-        Explore Intel's journey through time, discovering how our commitment
-        to innovation has shaped a more sustainable future for technology 
-        and our planet.
-      </p>
+    <div class="container py-5 hero">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <img src="img/intel-header-logo.svg" alt="Intel logo" class="hero-logo mb-4" />
+          <h1 class="hero-title">Sustainability Through the Ages</h1>
+          <p class="hero-subtitle">
+            Explore Intel's journey through time, discovering how our commitment
+            to innovation has shaped a more sustainable future for technology and our planet.
+          </p>
+        </div>
+      </div>
     </div>
   </header>
 
-  <!-- ===== MAIN CONTENT SECTION ===== -->
-  <main>
-    <!-- Timeline section containing all milestone cards -->
-    <section class="timeline-section">
-      <!-- Timeline section title -->
-      <h2 class="timeline-heading">Our Sustainability Milestones</h2>
-
-      <!-- Container for timeline cards using flexbox for responsive layout -->
-      <div class="timeline-container">
-
-        <!-- ===== MILESTONE CARD 1: 1968 ===== -->
-        <article class="milestone-card">
-          <!-- Year badge for the milestone -->
-          <div class="year-badge">1968</div>
-          
-          <!-- Card image -->
-          <img src="img/1.jpg" alt="Intel Founded" class="milestone-image" />
-          
-          <!-- Card content wrapper -->
-          <div class="card-content">
-            <!-- Milestone title -->
-            <h3 class="milestone-title">Intel Founded</h3>
-            <!-- Milestone description -->
-            <p class="milestone-description">
-              Robert Noyce and Gordon Moore rename the newly formed company 
-              NM Electronics to Intel Corporation, laying the foundation for 
-              decades of technological innovation.
+  <main id="main-content">
+    <!-- TIMELINE SECTION -->
+    <section id="timeline" class="timeline-section py-5">
+      <div class="container">
+        <div class="row justify-content-center mb-4">
+          <div class="col-lg-8 text-center">
+            <h2 class="timeline-heading">Our Sustainability Milestones</h2>
+            <p class="timeline-intro text-muted">
+              Intel's sustainability timeline blends technology leadership with environmental progress.
             </p>
           </div>
-        </article>
-
-        <!-- ===== MILESTONE CARD 2: 1971 ===== -->
-        <article class="milestone-card">
-          <!-- Year badge for the milestone -->
-          <div class="year-badge">1971</div>
-          
-          <!-- Card image -->
-          <img src="img/2.jpg" alt="First Microprocessor" class="milestone-image" />
-          
-          <!-- Card content wrapper -->
-          <div class="card-content">
-            <!-- Milestone title -->
-            <h3 class="milestone-title">First Microprocessor</h3>
-            <!-- Milestone description -->
-            <p class="milestone-description">
-              Intel debuts the 4004, the world's first commercial microprocessor, 
-              igniting the microprocessor revolution and propelling the future 
-              of computing devices.
-            </p>
-          </div>
-        </article>
-
-        <!-- ===== MILESTONE CARD 3: 1978 ===== -->
-        <article class="milestone-card">
-          <!-- Year badge for the milestone -->
-          <div class="year-badge">1978</div>
-          
-          <!-- Card image -->
-          <img src="img/3.jpg" alt="8086 Processor" class="milestone-image" />
-          
-          <!-- Card content wrapper -->
-          <div class="card-content">
-            <!-- Milestone title -->
-            <h3 class="milestone-title">8086 Processor</h3>
-            <!-- Milestone description -->
-            <p class="milestone-description">
-              Launch of the 8086 processor, establishing the x86 architecture 
-              that drives countless PCs and servers in the modern era.
-            </p>
-          </div>
-        </article>
-
-        <!-- ===== MILESTONE CARD 4: 1985 ===== -->
-        <article class="milestone-card">
-          <!-- Year badge for the milestone -->
-          <div class="year-badge">1985</div>
-          
-          <!-- Card image -->
-          <img src="img/4.jpg" alt="386 Processor" class="milestone-image" />
-          
-          <!-- Card content wrapper -->
-          <div class="card-content">
-            <!-- Milestone title -->
-            <h3 class="milestone-title">386 Processor</h3>
-            <!-- Milestone description -->
-            <p class="milestone-description">
-              Intel introduces the 386 processor with 32-bit architecture, 
-              ushering in a new era of performance and multitasking for 
-              personal computers.
-            </p>
-          </div>
-        </article>
-
-        <!-- ===== MILESTONE CARD 5: 2006 ===== -->
-        <article class="milestone-card">
-          <!-- Year badge for the milestone -->
-          <div class="year-badge">2006</div>
-          
-          <!-- Card image -->
-          <img src="img/istockphoto-1519694961-612x612.png" alt="Peak GHG Emissions" class="milestone-image" />
-          
-          <!-- Card content wrapper -->
-          <div class="card-content">
-            <!-- Milestone title -->
-            <h3 class="milestone-title">Peak GHG Emissions</h3>
-            <!-- Milestone description -->
-            <p class="milestone-description">
-              This year marks Intel's highest annual greenhouse gas emissions 
-              for operations. Over subsequent years, Intel invests heavily in 
-              chemical abatement, renewable energy, and energy-efficient 
-              manufacturing to reverse this trend.
-            </p>
-          </div>
-        </article>
-
-        <!-- ===== MILESTONE CARD 6: 2020 ===== -->
-        <article class="milestone-card">
-          <!-- Year badge for the milestone -->
-          <div class="year-badge">2020</div>
-          
-          <!-- Card image -->
-          <img src="img/RISE.png" alt="RISE Strategy" class="milestone-image" />
-          
-          <!-- Card content wrapper -->
-          <div class="card-content">
-            <!-- Milestone title -->
-            <h3 class="milestone-title">RISE Strategy</h3>
-            <!-- Milestone description -->
-            <p class="milestone-description">
-              Intel launches its RISE (Responsible, Inclusive, Sustainable, 
-              Enabling) strategy and 2030 goals, aiming to drive industry-wide 
-              progress on climate action, water stewardship, and waste reduction.
-            </p>
-          </div>
-        </article>
-
-        <!-- ===== MILESTONE CARD 7: 2022 ===== -->
-        <article class="milestone-card">
-          <!-- Year badge for the milestone -->
-          <div class="year-badge">2022</div>
-          
-          <!-- Card image -->
-          <img src="img/no-greenhouse-gas.png" alt="Net-Zero By 2040" class="milestone-image" />
-          
-          <!-- Card content wrapper -->
-          <div class="card-content">
-            <!-- Milestone title -->
-            <h3 class="milestone-title">Net-Zero By 2040</h3>
-            <!-- Milestone description -->
-            <p class="milestone-description">
-              Intel announces its commitment to achieve net-zero greenhouse 
-              gas emissions (Scope 1 and 2) across its global operations 
-              by 2040, building on years of environmental initiatives.
-            </p>
-          </div>
-        </article>
-
-        <!-- ===== MILESTONE CARD 8: 2023 ===== -->
-        <article class="milestone-card">
-          <!-- Year badge for the milestone -->
-          <div class="year-badge">2023</div>
-          
-          <!-- Card image -->
-          <img src="img/renewable-energy.png" alt="Renewable Electricity" class="milestone-image" />
-          
-          <!-- Card content wrapper -->
-          <div class="card-content">
-            <!-- Milestone title -->
-            <h3 class="milestone-title">Renewable Electricity</h3>
-            <!-- Milestone description -->
-            <p class="milestone-description">
-              The company achieves 99% renewable electricity usage worldwide, 
-              helping to drastically lower carbon emissions and driving progress 
-              toward Intel's long-term sustainability goals.
-            </p>
-          </div>
-        </article>
-
-        <!-- ===== MILESTONE CARD 9: 2024 ===== -->
-        <article class="milestone-card">
-          <!-- Year badge for the milestone -->
-          <div class="year-badge">2024</div>
-          
-          <!-- Card image -->
-          <img src="img/sust.png" alt="Sustainability Summit" class="milestone-image" />
-          
-          <!-- Card content wrapper -->
-          <div class="card-content">
-            <!-- Milestone title -->
-            <h3 class="milestone-title">Sustainability Summit</h3>
-            <!-- Milestone description -->
-            <p class="milestone-description">
-              Intel hosts its first Sustainability Summit, uniting suppliers, 
-              government officials, and industry leaders to collaborate on 
-              next-generation sustainable semiconductor manufacturing.
-            </p>
-          </div>
-        </article>
-
+        </div>
+        <div class="row g-4">
+          <article class="col-lg-4 col-md-6">
+            <div class="card milestone-card h-100 shadow-sm border-0">
+              <div class="year-badge">1968</div>
+              <img src="img/1.jpg" alt="Intel founded by Robert Noyce and Gordon Moore" class="card-img-top milestone-image" />
+              <div class="card-body">
+                <h3 class="milestone-title">Intel Founded</h3>
+                <p class="milestone-description">
+                  Robert Noyce and Gordon Moore rename the newly formed company NM Electronics to Intel Corporation, laying the foundation for decades of technological innovation.
+                </p>
+              </div>
+            </div>
+          </article>
+          <article class="col-lg-4 col-md-6">
+            <div class="card milestone-card h-100 shadow-sm border-0">
+              <div class="year-badge">1971</div>
+              <img src="img/2.jpg" alt="First commercial Intel microprocessor" class="card-img-top milestone-image" />
+              <div class="card-body">
+                <h3 class="milestone-title">First Microprocessor</h3>
+                <p class="milestone-description">
+                  Intel debuts the 4004, the world's first commercial microprocessor, igniting the microprocessor revolution and propelling the future of computing devices.
+                </p>
+              </div>
+            </div>
+          </article>
+          <article class="col-lg-4 col-md-6">
+            <div class="card milestone-card h-100 shadow-sm border-0">
+              <div class="year-badge">1978</div>
+              <img src="img/3.jpg" alt="The Intel 8086 processor" class="card-img-top milestone-image" />
+              <div class="card-body">
+                <h3 class="milestone-title">8086 Processor</h3>
+                <p class="milestone-description">
+                  Launch of the 8086 processor, establishing the x86 architecture that drives countless PCs and servers in the modern era.
+                </p>
+              </div>
+            </div>
+          </article>
+          <article class="col-lg-4 col-md-6">
+            <div class="card milestone-card h-100 shadow-sm border-0">
+              <div class="year-badge">1985</div>
+              <img src="img/4.jpg" alt="Intel 386 processor" class="card-img-top milestone-image" />
+              <div class="card-body">
+                <h3 class="milestone-title">386 Processor</h3>
+                <p class="milestone-description">
+                  Intel introduces the 386 processor with 32-bit architecture, ushering in a new era of performance and multitasking for personal computers.
+                </p>
+              </div>
+            </div>
+          </article>
+          <article class="col-lg-4 col-md-6">
+            <div class="card milestone-card h-100 shadow-sm border-0">
+              <div class="year-badge">2006</div>
+              <img src="img/istockphoto-1519694961-612x612.png" alt="Peak greenhouse gas emissions in 2006" class="card-img-top milestone-image" />
+              <div class="card-body">
+                <h3 class="milestone-title">Peak GHG Emissions</h3>
+                <p class="milestone-description">
+                  This year marks Intel's highest annual greenhouse gas emissions for operations. Over subsequent years, Intel invests heavily in chemical abatement, renewable energy, and energy-efficient manufacturing to reverse this trend.
+                </p>
+              </div>
+            </div>
+          </article>
+          <article class="col-lg-4 col-md-6">
+            <div class="card milestone-card h-100 shadow-sm border-0">
+              <div class="year-badge">2020</div>
+              <img src="img/RISE.png" alt="Intel RISE sustainability strategy" class="card-img-top milestone-image" />
+              <div class="card-body">
+                <h3 class="milestone-title">RISE Strategy</h3>
+                <p class="milestone-description">
+                  Intel launches its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy and 2030 goals, aiming to drive industry-wide progress on climate action, water stewardship, and waste reduction.
+                </p>
+              </div>
+            </div>
+          </article>
+          <article class="col-lg-4 col-md-6">
+            <div class="card milestone-card h-100 shadow-sm border-0">
+              <div class="year-badge">2022</div>
+              <img src="img/no-greenhouse-gas.png" alt="Intel commits to net-zero by 2040" class="card-img-top milestone-image" />
+              <div class="card-body">
+                <h3 class="milestone-title">Net-Zero By 2040</h3>
+                <p class="milestone-description">
+                  Intel announces its commitment to achieve net-zero greenhouse gas emissions (Scope 1 and 2) across its global operations by 2040, building on years of environmental initiatives.
+                </p>
+              </div>
+            </div>
+          </article>
+          <article class="col-lg-4 col-md-6">
+            <div class="card milestone-card h-100 shadow-sm border-0">
+              <div class="year-badge">2023</div>
+              <img src="img/renewable-energy.png" alt="Renewable electricity usage worldwide" class="card-img-top milestone-image" />
+              <div class="card-body">
+                <h3 class="milestone-title">Renewable Electricity</h3>
+                <p class="milestone-description">
+                  The company achieves 99% renewable electricity usage worldwide, helping to drastically lower carbon emissions and driving progress toward Intel's long-term sustainability goals.
+                </p>
+              </div>
+            </div>
+          </article>
+          <article class="col-lg-4 col-md-6">
+            <div class="card milestone-card h-100 shadow-sm border-0">
+              <div class="year-badge">2024</div>
+              <img src="img/sust.png" alt="Intel sustainability summit gathering" class="card-img-top milestone-image" />
+              <div class="card-body">
+                <h3 class="milestone-title">Sustainability Summit</h3>
+                <p class="milestone-description">
+                  Intel hosts its first Sustainability Summit, uniting suppliers, government officials, and industry leaders to collaborate on next-generation sustainable semiconductor manufacturing.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
-      <!-- End timeline container -->
     </section>
-    <!-- End timeline section -->
+
+    <!-- FOCUS AREAS SECTION -->
+    <section id="highlights" class="py-5 bg-light">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-4">
+          <div class="col-lg-8">
+            <h2>Intel Sustainability Focus Areas</h2>
+            <p class="text-muted mb-0">Three strategic themes that support a cleaner, more efficient future.</p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <article class="card feature-card h-100 border-0 shadow-sm">
+              <div class="card-body text-center">
+                <div class="feature-icon mb-3" aria-hidden="true">
+                  <i class="bi bi-sun-fill"></i>
+                </div>
+                <h3 class="h5">Renewable Energy</h3>
+                <p class="mb-4 text-muted">Intel expands clean power across global sites with solar and wind to reduce emissions and improve energy resilience.</p>
+                <a class="btn btn-outline-primary" href="#newsletter">Learn More</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <article class="card feature-card h-100 border-0 shadow-sm">
+              <div class="card-body text-center">
+                <div class="feature-icon mb-3" aria-hidden="true">
+                  <i class="bi bi-building"></i>
+                </div>
+                <h3 class="h5">Responsible Manufacturing</h3>
+                <p class="mb-4 text-muted">Intel invests in cleaner factories, efficient water use, and reduced waste across its global manufacturing network.</p>
+                <a class="btn btn-outline-primary" href="#newsletter">Learn More</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <article class="card feature-card h-100 border-0 shadow-sm">
+              <div class="card-body text-center">
+                <div class="feature-icon mb-3" aria-hidden="true">
+                  <i class="bi bi-cpu-fill"></i>
+                </div>
+                <h3 class="h5">AI for Sustainability</h3>
+                <p class="mb-4 text-muted">Artificial intelligence helps Intel identify energy savings, reduce emissions, and accelerate sustainable innovation at scale.</p>
+                <a class="btn btn-outline-primary" href="#newsletter">Learn More</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER SUBSCRIPTION SECTION -->
+    <section id="newsletter" class="newsletter-section py-5">
+      <div class="container">
+        <div class="row justify-content-center align-items-center g-4">
+          <div class="col-lg-8">
+            <div class="bg-white rounded-4 shadow-sm p-4 p-md-5">
+              <div class="mb-4 text-center">
+                <h2>Stay Updated</h2>
+                <p class="text-muted mb-0">Subscribe to Intel's Sustainability Newsletter.</p>
+              </div>
+              <form class="needs-validation" novalidate>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="First name" required />
+                    <div class="invalid-feedback">Please enter your first name.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Last name" required />
+                    <div class="invalid-feedback">Please enter your last name.</div>
+                  </div>
+                  <div class="col-12">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" placeholder="name@example.com" required />
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="updatesConsent" required />
+                      <label class="form-check-label" for="updatesConsent">I agree to receive sustainability updates.</label>
+                      <div class="invalid-feedback">You must agree before submitting.</div>
+                    </div>
+                  </div>
+                  <div class="col-12 text-center">
+                    <button class="btn btn-primary btn-lg px-5" type="submit">Subscribe</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ ACCORDION SECTION -->
+    <section id="faq" class="py-5 bg-light">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-4">
+          <div class="col-lg-8">
+            <h2>Frequently Asked Questions</h2>
+            <p class="text-muted mb-0">Answers to common questions about Intel's sustainability mission and progress.</p>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="accordion" id="faqAccordion">
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqHeadingOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne"
+                    aria-expanded="false" aria-controls="faqCollapseOne">
+                    What is Intel's sustainability mission?
+                  </button>
+                </h3>
+                <div id="faqCollapseOne" class="accordion-collapse collapse" aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Intel's mission is to reduce environmental impact, advance inclusive supply chains, and enable innovation that benefits people and planet.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqHeadingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo"
+                    aria-expanded="false" aria-controls="faqCollapseTwo">
+                    How is Intel reducing emissions?
+                  </button>
+                </h3>
+                <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Intel is reducing emissions through renewable energy, energy-saving manufacturing, and technology innovations that lower greenhouse gas output.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqHeadingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree"
+                    aria-expanded="false" aria-controls="faqCollapseThree">
+                    How can I support sustainability?
+                  </button>
+                </h3>
+                <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    You can support sustainability by choosing energy-efficient devices, recycling responsibly, and staying informed about industry progress.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- ===== FOOTER SECTION ===== -->
-  <footer class="footer">
-    <!-- Footer content with copyright and helpful info -->
-    <p class="footer-text">Scroll to view timeline | Hover over cards to learn more!</p>
-    <p class="footer-copyright">&copy; 2024 Intel Corporation. Committed to a sustainable future.</p>
+  <!-- FOOTER SECTION -->
+  <footer class="footer bg-dark text-white py-4">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <p class="mb-1 fw-semibold">Intel Sustainability Timeline</p>
+          <p class="mb-0 small">&copy; 2024 Intel Corporation. Committed to a sustainable future.</p>
+        </div>
+        <div class="col-md-6">
+          <ul class="nav justify-content-center justify-content-md-end gap-3">
+            <li class="nav-item"><a class="nav-link px-0 text-white" href="#">Privacy</a></li>
+            <li class="nav-item"><a class="nav-link px-0 text-white" href="#">Accessibility</a></li>
+            <li class="nav-item"><a class="nav-link px-0 text-white" href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </footer>
 
+  <!-- Bootstrap JS bundle for accordion and navbar behavior -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Automatically switch page direction for RTL languages.
+    const rtlLanguages = ['ar', 'he', 'fa', 'ur'];
+    const pageLang = document.documentElement.lang?.toLowerCase() || 'en';
+    document.documentElement.dir = rtlLanguages.includes(pageLang) ? 'rtl' : 'ltr';
+
+    // Enable Bootstrap form validation for the newsletter subscription.
+    document.addEventListener('DOMContentLoaded', function () {
+      const newsletterForm = document.querySelector('.needs-validation');
+      if (!newsletterForm) {
+        return;
+      }
+
+      newsletterForm.addEventListener('submit', function (event) {
+        if (!newsletterForm.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        newsletterForm.classList.add('was-validated');
+      }, false);
+    });
+  </script>
 </body>
 </html>
